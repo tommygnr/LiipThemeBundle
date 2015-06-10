@@ -79,7 +79,7 @@ class FileLocator extends BaseFileLocator
 
         $this->pathPatterns = array_merge_recursive(array_filter($pathPatterns), $defaultPathPatterns);
 
-        $this->lastTheme = $this->activeTheme->getName();
+        $this->setCurrentTheme($this->activeTheme->getName(), $this->activeTheme->getDeviceType());
 
         parent::__construct(array());
     }
